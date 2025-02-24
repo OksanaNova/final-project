@@ -5,11 +5,11 @@ import MyMealsAndIngridients from './MyMealsAndIngridients';
 function App() {
 
   return (
-    <>
+    <div className='App'>
       <MyList />
       <MyMealsAndIngridients />
 
-    </>
+    </div>
   )
 }
 

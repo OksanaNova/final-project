@@ -29,3 +29,32 @@ h1 {
 button:hover {
   cursor: pointer;
 }
+
+.App {
+  display: flex;
+  justify-content: space-around;
+}
+
+.whole-plan {
+  width: 70%;
+  height: 100vh;
+}
+
+.myInput {
+  width: 70%;
+  height: 20px;
+  padding: 10px;
+  border-radius: 20px;
+  display: block;
+  margin-top: 30px;
+}
+
+textarea {
+  display: block;
+  border: 1px solid #ddd;
+  margin-top: 30px;
+  width: 70%;
+  height: 200px;
+  border-radius: 20px;
+  font-family: "Montserrat", serif;
+}
