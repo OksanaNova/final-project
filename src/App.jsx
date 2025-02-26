@@ -6,12 +6,14 @@ import MyMealsAndIngridients from './MyMealsAndIngridients';
 
 function App() {
 
-  const [mealPlans, setMealPlans] = useState([])
+  const [mealPlans, setMealPlans] = useState([]);
+  const [selectedDay, setSelectedDay] = useState(false);
 
   const addMeal = () => {
     const newMeal = {
       title: "Today is...",
-      id: uuidv4()
+      id: uuidv4(),
+      mealForADay: ""
     }
     setMealPlans([newMeal, ...mealPlans])
     console.log(newMeal);
@@ -23,7 +25,13 @@ function App() {
 
   return (
     <div className='App'>
-      <MyList addMeal={addMeal} mealPlans={mealPlans} deleteDay={deleteDay}/>
+      <MyList 
+      addMeal={addMeal} 
+      mealPlans={mealPlans} 
+      deleteDay={deleteDay}
+      selectedDay={selectedDay}
+      setSelectedDay={setSelectedDay}
+      />
       <MyMealsAndIngridients />
 
     </div>
