@@ -38,6 +38,7 @@ button:hover {
 .whole-plan {
   width: 70%;
   height: 100vh;
+  /* margin-left: 20px; */
 }
 
 .myInput {
@@ -65,4 +66,23 @@ textarea {
 
 .default {
   background-color: #dcedf7;
+}
+
+.meal {
+  border-radius: 20px;
+  padding: 10px;
+  margin: 5px;
+}
+
+p {
+  color: #fff;
+  font-family: "Montserrat", serif;
+  font-size: 20px;
+}
+
+.title {
+  color: #000;
+  font-family: "Montserrat", serif;
+  margin: 2px;
+  font-size: 15px;
 }

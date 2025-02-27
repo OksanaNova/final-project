@@ -11,7 +11,7 @@ const MyList = ({addMeal, mealPlans, deleteDay, selectedDay, setSelectedDay}) =>
                 <div key={id} 
                 className={`meal ${id === selectedDay ? "selected" : "default"}`}
                 onClick={() => setSelectedDay(id)}>
-                    <p>{title}</p>
+                    <p className="title">{title}</p>
                     <p>{mealForADay}</p>
                     <button className="button-delete" onClick={() => deleteDay(id)}>Delete</button>
                 </div>

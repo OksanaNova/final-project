@@ -7,7 +7,7 @@ import MyMealsAndIngridients from './MyMealsAndIngridients';
 function App() {
 
   const [mealPlans, setMealPlans] = useState([]);
-  const [selectedDay, setSelectedDay] = useState(false);
+  const [selectedDay, setSelectedDay] = useState('');
 
   const addMeal = () => {
     const newMeal = {
@@ -23,8 +23,19 @@ function App() {
     setMealPlans(mealPlans.filter(({id}) => id !== mealId));
   } 
 
+  const updateDay = (myUpdatedMeal) => {
+    const updatedMeals = mealPlans.map((mealItem) => {
+      if (mealItem.id === myUpdatedMeal.id) {
+        return myUpdatedMeal;
+      }
+      return mealItem;
+    })
+    setMealPlans(updatedMeals)
+  }
+
   return (
     <div className='App'>
+
       <MyList 
       addMeal={addMeal} 
       mealPlans={mealPlans} 
@@ -32,7 +43,11 @@ function App() {
       selectedDay={selectedDay}
       setSelectedDay={setSelectedDay}
       />
-      <MyMealsAndIngridients />
+      
+      <MyMealsAndIngridients 
+        selectedDay={selectedDay}
+        updateDay={updateDay}
+      />
 
     </div>
   )
