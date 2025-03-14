@@ -24,10 +24,17 @@ h1 {
   font-family: "Montserrat", serif;
   background: none;
   border: 0;
+  font-size: 11px;
+  font-weight: bolder;
 }
 
 button:hover {
   cursor: pointer;
+}
+
+.button-delete:hover {
+  color: red;
+  transition-duration: 1s;
 }
 
 .App {
@@ -54,6 +61,7 @@ textarea {
   display: block;
   border: 1px solid #ddd;
   margin-top: 30px;
+  padding: 10px;
   width: 70%;
   height: 200px;
   border-radius: 20px;
@@ -80,9 +88,9 @@ p {
   font-size: 20px;
 }
 
-.title {
+.field {
   color: #000;
   font-family: "Montserrat", serif;
   margin: 2px;
-  font-size: 15px;
+  font-size: 14px;
 }
