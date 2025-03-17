@@ -17,7 +17,7 @@ function App() {
       ingredients: ""
     }
     setMealPlans([newMeal, ...mealPlans])
-    console.log(newMeal);
+    // console.log(newMeal);
   }
 
   const deleteDay = (mealId) => {
@@ -25,6 +25,7 @@ function App() {
   } 
 
   const updateDay = (myUpdatedMeal) => {
+    // console.log('update day')
     const updatedMeals = mealPlans.map((mealItem) => {
       if (mealItem.id === myUpdatedMeal.id) {
         return myUpdatedMeal;
@@ -37,7 +38,8 @@ function App() {
   const getActiveMeal = () => {
     return mealPlans.find(({id}) => id === selectedDay)
   }
-  console.log(mealPlans)
+  // console.log(mealPlans)
+
   return (
     <div className='App'>
 
@@ -50,7 +52,7 @@ function App() {
       />
       
       <MyMealsAndIngridients 
-        selectedDay={getActiveMeal()}
+        activeMeal={getActiveMeal()}
         updateDay={updateDay}
       />
 
