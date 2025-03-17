@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { v4 as uuidv4 } from 'uuid';
 import './App.css'
 import MyList from './MyList';
@@ -6,8 +6,13 @@ import MyMealsAndIngridients from './MyMealsAndIngridients';
 
 function App() {
 
-  const [mealPlans, setMealPlans] = useState([]);
+  const [mealPlans, setMealPlans] = useState(
+    localStorage.getItem("myKey") ? JSON.parse(localStorage.getItem("myKey")) : []);
   const [selectedDay, setSelectedDay] = useState('');
+
+  useEffect(() => {
+    localStorage.setItem("myKey", JSON.stringify(mealPlans))
+  }, [mealPlans])
 
   const addMeal = () => {
     const newMeal = {

@@ -14,7 +14,6 @@ const MyMealsAndIngridients = ({ activeMeal, updateDay }) => {
     
     return (
         <div className="whole-plan">
-            <div className="meal-editing">
 
                 <input
                 type="text"
@@ -41,8 +40,7 @@ const MyMealsAndIngridients = ({ activeMeal, updateDay }) => {
                 value={activeMeal.ingredients}
                 onChange={(e) => editMyMeal('ingredients', e.target.value)}
                 />
-
-            </div>
+        
         </div>
     )
 }
